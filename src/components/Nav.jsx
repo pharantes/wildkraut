@@ -1,15 +1,57 @@
+import React, { useState } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 export default function Nav() {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
   return (
-    <nav className="nav">
-      <Link to="/" className="site-title">
-        Juan Renovation
-      </Link>
-      <ul>
-        <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/about">About</CustomLink>
-      </ul>
+    <nav className="navbar navbar-expand-lg bg-light">
+      <div className="container">
+        <Link to="/" className="navbar-brand">
+          Juan T.
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded={!isNavCollapsed ? true : false}
+          aria-label="Toggle navigation"
+          onClick={handleNavCollapse}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          className={`${
+            isNavCollapsed ? "collapse" : ""
+          } navbar-collapse + "collapse navbar-collapse" id="navbarSupportedContent"`}
+        >
+          <div className="d-flex navbar-nav">
+            <div className="nav-item">
+              <CustomLink
+                className="nav-link active"
+                aria-current="page"
+                to="/"
+              >
+                Home
+              </CustomLink>
+            </div>
+            <div className="nav-item">
+              <CustomLink className="nav-link" to="/about">
+                About
+              </CustomLink>
+            </div>
+            <div className="nav-item">
+              <CustomLink className="nav-link" to="/contact">
+                Contact
+              </CustomLink>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }
