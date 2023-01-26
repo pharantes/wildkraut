@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div className="container mt-5">
       <div className="row">
-        <h1 className="mb-5">Contact TESTING PULL!</h1>
+        <h1 className="mb-5">Contact</h1>
         <div className="col-lg-6">
           <form>
             <div class="form-floating mb-2">
