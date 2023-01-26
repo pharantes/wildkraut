@@ -26,7 +26,7 @@ export default function Nav() {
 
         <div
           className={`${
-            isNavCollapsed ? "collapse" : ""
+            isNavCollapsed ? "collapse justify-content-end" : ""
           } navbar-collapse + "collapse navbar-collapse" id="navbarSupportedContent"`}
         >
           <div className="d-flex navbar-nav">
