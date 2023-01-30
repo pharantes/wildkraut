@@ -9,7 +9,7 @@ export default function Nav() {
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container">
         <Link to="/" className="navbar-brand">
-          Juan T.
+          Brand Logo.
         </Link>
         <button
           className="navbar-toggler"
