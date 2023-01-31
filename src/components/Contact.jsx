@@ -7,34 +7,34 @@ export default function Contact() {
         <h1 className="mb-5">Contact</h1>
         <div className="col-lg-6">
           <form>
-            <div class="form-floating mb-2">
+            <div className="form-floating mb-2">
               <input
                 type="email"
-                class="form-control"
+                className="form-control"
                 id="floatingInput"
                 placeholder="name@example.com"
               />
-              <label for="floatingInput">Email address Test</label>
+              <label htmlFor="floatingInput">Email address Test</label>
             </div>
-            <div class="form-floating mb-2">
+            <div className="form-floating mb-2">
               <input
                 type="Name"
-                class="form-control"
+                className="form-control"
                 id="floatingName"
                 placeholder="Name"
               />
-              <label for="floatingName">Name</label>
+              <label htmlFor="floatingName">Name</label>
             </div>
-            <div class="form-floating mb-2">
+            <div className="form-floating mb-2">
               <textarea
-                class="form-control"
+                className="form-control"
                 placeholder="Leave a message here"
                 id="floatingText"
                 style={{ height: "200px" }}
               ></textarea>
-              <label for="floatingText">Message</label>
+              <label htmlFor="floatingText">Message</label>
             </div>
-            <button type="submit" class="btn btn-primary align-self-center">
+            <button type="submit" className="btn btn-primary align-self-center">
               Submit
             </button>
           </form>
